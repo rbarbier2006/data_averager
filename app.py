@@ -30,7 +30,7 @@ def process():
     cols = int(request.form['cols'])
 
     xls = pd.ExcelFile(file)
-    usable_sheets = xls.sheet_names[5:]  # start from 6th sheet
+    usable_sheets = xls.sheet_names[0:]  # start from nth sheet (in this case 0)
 
     dfs = []
     for sheet in usable_sheets:
